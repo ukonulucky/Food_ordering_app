@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/js/dist/collapse"
+import pizzaData from "./pizzaData"
+import Navbar from './components/Navbar';
+import Pizza from './components/Pizza';
 function App() {
+  
+  const PizzaComponent = pizzaData.map((x, y) => <div key={ y }> <Pizza pizza = { x } /> </div>)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="pizzaBody">
+      { PizzaComponent }
+      </div>
     </div>
   );
 }

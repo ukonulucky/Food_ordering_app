@@ -1,0 +1,98 @@
+.pizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  row-gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.pizza h2 {
+  font-size: 1.5rem !important;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.pizza .pic {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pizza .pic img {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.pizza .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.pizza .content select {
+  border: black !important;
+}
+
+.pizza .content2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.pizza .content2 .add {
+  background-color: red !important;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=Pizza.css.map */

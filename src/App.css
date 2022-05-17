@@ -8,12 +8,30 @@
 }
 .pizzaBody{
   display: grid;
-  grid-gap:3rem;
+  grid-gap:1rem;
+  max-width:1550px;
+  margin: 0 auto;
   grid-template-columns: repeat(3,1fr) !important;
    margin-bottom: 3rem;
 }
-@media screen and (min-width:490px){
+@media screen and (max-width:560px){
+  .pizzaBody{
+    grid-template-columns: repeat(1,1fr) !important;
+    grid-gap:3rem;
+  }
+}
+  @media (min-width:561px) and (max-width:905px){
+    .pizzaBody{
+      grid-template-columns: repeat(2,1fr) !important;
+      grid-gap:2rem;
+    }
  .navbar-brand{
   font-size: 2rem !important; 
  }
+}
+
+@media screen and (min-width:906px){
+  .pizzaBody{
+    grid-gap:3rem;
+  }
 }

@@ -38,15 +38,15 @@ function Pizza({ pizza }) {
                 </div>
                 <div className="content2 mb-2">
                     <div className="price">
-                        <h3>Price: #{pizza.prices[0][variants]  * quantity}</h3>
+                        <h5>Price: #{pizza.prices[0][variants]  * quantity}</h5>
                     </div>
-                    <div className="add px-3 py-2 btn">
+                    <div className="add px-2 py-2 btn">
                         Add To Cart
                     </div>
                 </div>
    
             </div>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="mt-5">
         <Modal.Header closeButton>
                     <Modal.Title>{ pizza.name}</Modal.Title>
         </Modal.Header>

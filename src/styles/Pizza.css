@@ -13,16 +13,60 @@
   height: -moz-max-content;
   height: max-content;
   row-gap: 1rem;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   -webkit-box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 1020px) {
+  .pizza {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .pizza {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 905px) {
+  .pizza {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 906px) {
+  .pizza {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .pizza h2 {
   font-size: 1.5rem !important;
   margin-top: 1rem;
   cursor: pointer;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+  .pizza h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
 }
 
 .pizza .pic {
@@ -39,46 +83,61 @@
 }
 
 .pizza .pic img {
-  width: 300px;
+  width: 80%;
   height: 200px;
   margin: 0 auto;
   cursor: pointer;
 }
 
 .pizza .content {
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 3rem;
-          column-gap: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 0.8rem 0;
 }
 
 .pizza .content select {
   border: black !important;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 560px) {
+  .pizza .content select {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .pizza .content {
+    font-size: 2rem;
+  }
 }
 
 .pizza .content2 {
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 3rem;
-          column-gap: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 0.8rem 0;
+}
+
+@media screen and (max-width: 560px) {
+  .pizza .content2 h5 {
+    font-size: 1.5rem;
+  }
 }
 
 .pizza .content2 .add {
@@ -94,5 +153,18 @@
   width: -moz-max-content;
   width: max-content;
   border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pizza .content2 .add {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .pizza .content2 .add {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=Pizza.css.map */

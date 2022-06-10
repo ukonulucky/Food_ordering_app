@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
+import { buttonState } from '../redux/actions' 
 import "../styles/Pizza.css"
-import { Modal,Button } from "react-bootstrap"
+import { Modal, Button } from "react-bootstrap"
+import { useDispatch,useSelector } from "react-redux"
+import { addToBasket } from '../redux/actions'
 function Pizza({ pizza }) {
+  const dispatch = useDispatch()
+const handleButton = () => {
+    dispatch(buttonState(pizza._id))
+}
     const [variants, setVariants] = useState("small")
     const [quantity, setQuantity] = useState(1)
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+ 
     return (
       <div>
       <div className="pizza">
@@ -17,15 +25,15 @@ function Pizza({ pizza }) {
               <div className="content">
                     <div className="varient">
                         <h2>Variants</h2>
-                        <select value={variants}   className="form-control" onChange={(e) => {
+                        <select value={variants}   className="form-control select" onChange={(e) => {
                             setVariants(e.target.value)
                         }}>
                        {pizza.varients.map(size => (<option value={size}>{size}</option>))}
                       </select>
-                  </div>
+            </div>
                     <div className="quantity">
                         <h2>Quantity</h2>
-                        <select value={quantity} className="form-control"  onChange={(e) => {
+                        <select value={quantity} className="form-control select"  onChange={(e) => {
                             setQuantity(e.target.value)
                         }}>
                       {
@@ -40,9 +48,13 @@ function Pizza({ pizza }) {
                     <div className="price">
                         <h5>Price: #{pizza.prices[0][variants]  * quantity}</h5>
                     </div>
-                    <div className="add px-2 py-2 btn">
-                        Add To Cart
-                    </div>
+            <button className="add px-2 py-2 btn" disabled={pizza.buttonState} onClick={() => {
+              dispatch(addToBasket(pizza._id, variants, quantity))
+              handleButton()
+             
+                    }}>
+                     { pizza.itemState }
+                    </button>
                 </div>
    
             </div>

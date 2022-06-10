@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/js/dist/collapse"
+import Cart from "./components/Cart"
 
 import Navbar from './components/Navbar';
 import Pizza from './components/Pizza';
@@ -18,7 +19,6 @@ function App() {
 
   const dispatch = useDispatch()
   const data  = useSelector( state => state )
-
  
 
   useEffect(() => {
@@ -36,6 +36,13 @@ function App() {
              {data.loading || data.error !== "" ? <Spinner /> :  <div className="pizzaBody">
               { PizzaComponent }
               </div>}
+          </>}>
+          </Route>
+          
+          <Route exact path="/viewpiza" element={<>
+            <Navbar />
+             <Cart />
+              
           </>}>
             </Route>
         </Routes>

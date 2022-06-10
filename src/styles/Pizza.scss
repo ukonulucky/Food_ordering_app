@@ -54,8 +54,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 0.8rem 0;
-        select{
+        .select{
             border: black !important;
+            text-transform: capitalize;
+            border: 5px solid block;
             text-transform: capitalize;
             @media screen and (max-width:560px) {
                 font-size: 1.2rem;

@@ -15,6 +15,10 @@ export const fetchData = () => {
             
             // console.log(JSON.stringify(res.data))
             if (res.data) {
+                 res.data.forEach(i => {
+                     i.buttonState = false
+                     i.itemState = "Add To Basket"
+                 })
           dispatch(fetchUserDataSuccess(res.data))
                }
         } catch (error) {

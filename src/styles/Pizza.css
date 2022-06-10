@@ -103,13 +103,15 @@
   padding: 0.8rem 0;
 }
 
-.pizza .content select {
+.pizza .content .select {
   border: black !important;
+  text-transform: capitalize;
+  border: 5px solid block;
   text-transform: capitalize;
 }
 
 @media screen and (max-width: 560px) {
-  .pizza .content select {
+  .pizza .content .select {
     font-size: 1.2rem;
   }
 }
